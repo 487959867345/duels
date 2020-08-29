@@ -74,7 +74,7 @@ public class DUELIdle {
                     state.lastPos = player.getPos();
                 }
 
-                player.teleport(state.lastPos.x, state.lastPos.y, state.lastPos.z);
+                player.teleport(state.lastPos.x, 64, state.lastPos.z);
             }
         }
 
