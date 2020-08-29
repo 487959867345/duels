@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "duel",
+  "version": "${version}",
+  "name": "DUEL",
+  "description": "best duels",
+  "authors": [
+    "iamSeahawk"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.best.duel.DUEL"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.9.1",
+    "fabric": "*",
+    "minecraft": "1.16.2",
+    "plasmid": "0.3.x"
+  }
+}

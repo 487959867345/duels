@@ -1,0 +1,14 @@
+{
+  "type": "duel:duel",
+  "map": {
+    "spawn_block": {
+      "Name": "minecraft:red_terracotta",
+      "Properties": {}
+    }
+  },
+  "players": {
+    "min": 2,
+    "max": 2
+  },
+  "time_limit_secs": 60
+}
