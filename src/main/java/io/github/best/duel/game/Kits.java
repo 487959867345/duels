@@ -21,4 +21,20 @@ public class Kits {
             return null;
         }
     }
+    public enum Archer implements ItemConvertible {
+        HEAD(Items.DIAMOND_BOOTS),
+        MAIN(Items.BOW),
+        CHEST(Items.DIAMOND_CHESTPLATE),
+        LEGS(Items.DIAMOND_LEGGINGS),
+        BOOTS(Items.DIAMOND_BOOTS);
+
+
+        Archer(Item bow) {
+        }
+
+        @Override
+        public Item asItem() {
+            return null;
+        }
+    }
 }
