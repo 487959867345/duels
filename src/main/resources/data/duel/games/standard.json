@@ -2,7 +2,7 @@
   "type": "duel:duel",
   "map": {
     "spawn_block": {
-      "Name": "minecraft:red_terracotta",
+      "id": "duel_main",
       "Properties": {}
     }
   },
