@@ -136,13 +136,13 @@ public class DUELActive {
         // giv sheild
         player.inventory.offHand.set(0,new ItemStack(Items.SHIELD));
         // main loot
-        player.inventory.main.set(0, new ItemStack(Items.DIAMOND_SWORD));
+        player.inventory.main.set(0, new ItemStack(Kits.Basic.MAIN));
         player.inventory.main.set(1, new ItemStack(Items.GOLDEN_APPLE)).increment(20);
         // armor
-        player.inventory.armor.set(3, new ItemStack(Items.DIAMOND_HELMET));
-        player.inventory.armor.set(2, new ItemStack(Items.DIAMOND_CHESTPLATE));
-        player.inventory.armor.set(1, new ItemStack(Items.DIAMOND_LEGGINGS));
-        player.inventory.armor.set(0, new ItemStack(Items.DIAMOND_BOOTS));
+        player.inventory.armor.set(3, new ItemStack(Kits.Basic.HEAD));
+        player.inventory.armor.set(2, new ItemStack(Kits.Basic.CHEST));
+        player.inventory.armor.set(1, new ItemStack(Kits.Basic.LEGS));
+        player.inventory.armor.set(0, new ItemStack(Kits.Basic.BOOTS));
     }
 
     private void spawnParticipant(ServerPlayerEntity player) {
