@@ -210,7 +210,7 @@ public class DUELActive {
         if (winningPlayer != null) {
             message = winningPlayer.getDisplayName().shallowCopy().append("Has won the Duel!").formatted(Formatting.GOLD);
         } else {
-            message = new LiteralText("The game ended, but nobody won!").formatted(Formatting.GOLD);
+            message = new LiteralText(" The game ended, but nobody won!").formatted(Formatting.GOLD);
         }
 
         broadcastMessage(message, this.gameWorld);
