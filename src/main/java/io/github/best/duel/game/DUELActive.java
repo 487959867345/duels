@@ -3,6 +3,8 @@ package io.github.best.duel.game;
 import io.github.best.duel.game.map.DUELMap;
 import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.ActionResult;
@@ -117,6 +119,9 @@ public class DUELActive {
 
     private boolean onPlayerDamage(ServerPlayerEntity player, DamageSource source, float amount) {
         // TODO handle damage
+        if (player.getHealth() < 5 ){
+            player.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION));
+        }
         return false;
     }
 
@@ -159,7 +164,6 @@ public class DUELActive {
     private void tick() {
         ServerWorld world = this.gameWorld.getWorld();
         long time = world.getTime();
-
         DUELIdle.IdleTickResult result = this.idle.tick(time, gameWorld);
 
         switch (result) {
