@@ -5,9 +5,11 @@ import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.math.BlockPos;
 import org.lwjgl.system.CallbackI;
 import xyz.nucleoid.plasmid.game.GameWorld;
 import xyz.nucleoid.plasmid.game.event.*;
@@ -72,7 +74,7 @@ public class DUELActive {
             builder.setRule(GameRule.PORTALS, RuleResult.DENY);
             builder.setRule(GameRule.PVP, RuleResult.ALLOW);
             builder.setRule(GameRule.HUNGER, RuleResult.DENY);
-            builder.setRule(GameRule.FALL_DAMAGE, RuleResult.DENY);
+            builder.setRule(GameRule.FALL_DAMAGE, RuleResult.ALLOW);
             builder.setRule(GameRule.INTERACTION, RuleResult.DENY);
             builder.setRule(GameRule.BLOCK_DROPS, RuleResult.DENY);
             builder.setRule(GameRule.THROW_ITEMS, RuleResult.DENY);
@@ -88,6 +90,7 @@ public class DUELActive {
             builder.on(GameTickListener.EVENT, active::tick);
             builder.on(PlayerDamageListener.EVENT, active::onPlayerDamage);
             builder.on(PlayerDeathListener.EVENT, active::onPlayerDeath);
+            builder.on(BreakBlockListener.EVENT, active::onBreak);
         });
     }
 
@@ -148,6 +151,9 @@ public class DUELActive {
         player.inventory.armor.set(2, new ItemStack(Kits.Basic.CHEST));
         player.inventory.armor.set(1, new ItemStack(Kits.Basic.LEGS));
         player.inventory.armor.set(0, new ItemStack(Kits.Basic.BOOTS));
+    }
+    private ActionResult onBreak(PlayerEntity player, BlockPos pos){
+        return ActionResult.FAIL;
     }
 
     private void spawnParticipant(ServerPlayerEntity player) {

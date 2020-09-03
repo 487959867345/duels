@@ -6,6 +6,7 @@ import xyz.nucleoid.plasmid.game.map.template.TemplateChunkGenerator;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
 
+// try to figure out how in the hell you load a map later
 public class DUELMap {
     private final MapTemplate template;
     private final DUELMapConfig config;
