@@ -141,7 +141,7 @@ public class DUELActive {
         // giv sheild
         player.inventory.offHand.set(0,new ItemStack(Items.SHIELD));
         // main loot
-        player.inventory.main.set(0, new ItemStack(Kits.Basic.MAIN));
+        player.inventory.main.set(0, new ItemStack(Items.DIAMOND_SWORD));
         player.inventory.main.set(1, new ItemStack(Items.GOLDEN_APPLE)).increment(20);
         // armor
         player.inventory.armor.set(3, new ItemStack(Kits.Basic.HEAD));
