@@ -142,7 +142,7 @@ public class DUELActive {
         player.inventory.offHand.set(0,new ItemStack(Items.SHIELD));
         // main loot
         player.inventory.main.set(0, new ItemStack(Items.DIAMOND_SWORD));
-        player.inventory.main.set(1, new ItemStack(Items.GOLDEN_APPLE)).increment(20);
+        player.inventory.main.set(1, new ItemStack(Items.GOLDEN_APPLE));
         // armor
         player.inventory.armor.set(3, new ItemStack(Kits.Basic.HEAD));
         player.inventory.armor.set(2, new ItemStack(Kits.Basic.CHEST));
@@ -215,7 +215,7 @@ public class DUELActive {
 
         Text message;
         if (winningPlayer != null) {
-            message = winningPlayer.getDisplayName().shallowCopy().append("Has won the Duel!").formatted(Formatting.GOLD);
+            message = winningPlayer.getDisplayName().shallowCopy().append(" Has won the Duel!").formatted(Formatting.GOLD);
         } else {
             message = new LiteralText(" The game ended, but nobody won!").formatted(Formatting.GOLD);
         }
