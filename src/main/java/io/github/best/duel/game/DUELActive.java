@@ -121,10 +121,7 @@ public class DUELActive {
     }
 
     private boolean onPlayerDamage(ServerPlayerEntity player, DamageSource source, float amount) {
-        // TODO handle damage
-        if (player.getHealth() < 5 ){
-            player.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION));
-        }
+        // TODO handle damag
         return false;
     }
 
